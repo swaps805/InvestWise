@@ -1,3 +1,5 @@
 .env
 /stocks/
 myreadme.txt
+.vscode/
+__pycache__/

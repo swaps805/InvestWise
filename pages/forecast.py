@@ -51,6 +51,7 @@ system_prompt = f" looking at the historic stock data for company {stock_name}, 
 prompt_parts =[system_prompt]
 
 st.set_page_config(page_title='Stonks', page_icon ='📈')
+st.title('Stock Market Analysis and Investing advise 📊')
 submit_btn = st.button('Generate Text')
 
 if submit_btn:

@@ -68,9 +68,7 @@ def forecasted_data(df, forecast_price, scaler, close_price, num_days_pred):
 
 
 def runner(df, num_days_pred=30):
-    # path = 'stocks/BEL.BEL.csv'
-    # name = 'NVDA'
-    # df = get_data(name)
+
     close_price, scaler = scale_data(df)
     train, test = train_test_split(close_price)
     
@@ -80,7 +78,7 @@ def runner(df, num_days_pred=30):
     testX = testX.reshape(testX.shape[0],testX.shape[1] , 1)
 
     model = create_model(seq_size)
-    model.fit(trainX,trainY, validation_split=0.1, epochs=2, batch_size=64, verbose=1)
+    model.fit(trainX,trainY, validation_split=0.1, epochs=25, batch_size=64, verbose=1)
     
     # get_predictions(model, trainX, testX, scaler) # not needed as such
     
@@ -89,8 +87,7 @@ def runner(df, num_days_pred=30):
     df_pred = forecasted_data(df, forecast_price, scaler, close_price, num_days_pred)
     return (df_pred, close_price ,forecast_price, scaler)
     
-# if __name__ == "__main__":
-#     main()
+
     
     
     

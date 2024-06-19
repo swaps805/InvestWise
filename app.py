@@ -56,8 +56,8 @@ def merge_data(df, df_pred):
     df_new.sort_values(by='Date', inplace=True)
     return df_new
 
-st.set_page_config(page_title='Stonks', page_icon ='📈')
-st.header('Gamble your money away! 🤑')
+st.set_page_config(page_title='InvestWise', page_icon ='📈')
+st.header('Your Investment partner  🤑')
 
 st.sidebar.header('Settings')
 end_date = st.sidebar.date_input('End Date', datetime.today())
@@ -79,12 +79,14 @@ if  st.sidebar.button('Get Data'):
 
 
 if 'df_raw' in ss:
+    st.header('Current Stock Price History 🧾')
     st.dataframe(ss.df_raw)
 
 if 'info_graph' in ss:
     st.plotly_chart(ss.info_graph)
 
 if 'df_new' in ss:
+    st.header(' My prediction on next '+ str(ss.num_days_pred) +' days', "🪙")
     st.dataframe(ss.df_new)
 
 if 'prediction_graph' in ss:
