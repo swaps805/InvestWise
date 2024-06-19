@@ -1,6 +1,6 @@
-# Invest Vise
+# Invest Wise
 
-Invest Vise is a  tool designed to assist you in making informed investment decisions. This project extracts stock data from Yahoo Finance, performs time series analysis using Long Short-Term Memory (LSTM) models in TensorFlow, and leverages the Gemini Large Language Model (LLM) to provide personalized investing advice based on the analyzed data.
+Invest Wise is a  tool designed to assist you in making informed investment decisions. This project extracts stock data from Yahoo Finance, performs time series analysis using Long Short-Term Memory (LSTM) models in TensorFlow, and leverages the Gemini Large Language Model (LLM) to provide personalized investing advice based on the analyzed data.
 
 ## Features
 
